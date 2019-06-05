@@ -1,0 +1,46 @@
+#############################################################################
+#
+##### directories ######
+##
+## Directory for storing ncmpcpp related files.  Changing it is useful if you
+## want to store everything somewhere else and provide command line setting for
+## alternative location to config file which defines that while launching
+## ncmpcpp.
+##
+#
+ncmpcpp_directory = "~/.ncmpcpp"
+#
+##
+## Directory for storing downloaded lyrics. It defaults to ~/.lyrics since other
+## MPD clients (eg. ncmpc) also use that location.
+##
+#
+lyrics_directory = "~/.lyrics"
+#
+##### connection settings #####
+#
+mpd_host = 127.0.0.1
+#
+mpd_port = 6600
+#
+mpd_connection_timeout = 5
+#
+## Needed for tag editor and file operations to work.
+##
+mpd_music_dir = "~/Music"
+#
+mpd_crossfade_time = 5
+#
+##### music visualizer #####
+##
+## Note: In order to make music visualizer work you'll need to use mpd fifo
+## output, whose format parameter has to be set to 44100:16:1 for mono
+## visualization or 44100:16:2 for stereo visualization. Example configuration
+## (it has to be put into mpd.conf)
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
